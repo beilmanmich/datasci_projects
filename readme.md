@@ -3,8 +3,7 @@ A description of weekly projects completed throughout Spring 2017 for The Data I
 
 ## (1) Using Graph and Network Theory To Investigate the NYC Social Elite
 
-<a href="http://www.newyorksocialdiary.com/">The New York Social Diary</a> provides a fascinating lens onto New York's socially well-to-do. As shown in <a href="http://www.newyorksocialdiary.com/party-pictures/2014/holiday-dinners-and-doers
-">this report of a recent holiday party</a>, almost all the photos have annotated captions labeling their subjects. We can think of this as implicitly implying a social graph: there is a connection between two individuals if they appear in a picture together.
+<a href="http://www.newyorksocialdiary.com/">The New York Social Diary</a> provides a fascinating lens onto New York's socially well-to-do. As shown in <a href="http://www.newyorksocialdiary.com/party-pictures/2014/holiday-dinners-and-doers">this report of a recent holiday party</a>, almost all the photos have annotated captions labeling their subjects. We can think of this as implicitly implying a social graph: there is a connection between two individuals if they appear in a picture together.
 
 In this project, I investigate these connections between the NYC elite. I determine who the most socially popular and influential people are, as well as pairs with the strongest connections. (The latter analysis picks up the obvious  -- marriages and family ties -- as well as connections not readily apparent, such as affairs and infidelities.) Methodologically this was completed by scraping all website pages for photo captions, total number of valid captions was 93,093. These captions were then parsed to return unique names, revealing a total of 113,031 names in the social network. Finally, I performed the graph analysis using networkx. The graph visualization can be viewed in the screenshot below.
 
@@ -16,7 +15,7 @@ _TOOLS USED_: Python - BeutifulSoup (webscrape), regex (cleaning website data), 
 
 The city of New York inspect roughly 24,000 restaraunts a year and assigns a grade to restaurants after each inspection, over a decade this creates a public dataset of 531,935 records. I used PostGreSQL and Pandas to parse and analyze a decade worth of NYC Restaurant Inspections data. I extracted different slices -- determining the grade distribution by zipcode, borough, and cuisine. I also found which cuisines tended to have a disproportionate number of which violations.
 
-<center><img src="https://github.com/beilmanmich/datasci_projects/blob/master/carto_map.png"></a></center><br>
+![map image](https://github.com/beilmanmich/datasci_projects/blob/master/carto_map.png)
 A map view of scores by zipcode, where higher intensity reds are equivalent to higher scores, via cartodb.
 
 _TOOLS USED_: Pandas, numPy, psql, SQLAlchemy, matplotlib, seaborn
