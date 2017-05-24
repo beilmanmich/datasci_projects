@@ -90,6 +90,8 @@ _TOOLS USED_: numpy, seaborn, pandas, dill, sklearn - KNeighborsRegressor, linea
 
 I scraped the entire English Wikipedia to determine its <a href="https://github.com/beilmanmich/datasci_projects/blob/master/MapReduce/top_100_words.py">most frequently used words</a>. I then collected <a href="https://github.com/beilmanmich/datasci_projects/blob/master/MapReduce/linkstats.py">link statistics</a> (mean, standard deviations, percentiles) for the unique links on each page, and <a href="https://github.com/beilmanmich/datasci_projects/blob/master/MapReduce/double_link_stats.py">found the top linked concepts</a> by examining doublelinks.
 
+Distributed computing is ideal for these types of tasks, as they allow 
+
 _TOOLS USED_: Hadoop/HDFS, MapReduce, MRJob, XML, BeutifulSoup, Custom Builty XML Parser, Google Cloud Platform, AWS
 
 ## (5) DataViz
@@ -128,7 +130,7 @@ Music offers an extremely rich and interesting playing field. The objective of t
 
 _TOOLS USED_: numpy, scipy, Librosa, audioread, audioop, pandas, dill, sklearn - preprocessing, ensemble, LabelEncoder, DecisionTreeClassifier, StandardScaler, normalize, PCA, RandomForestClassifier, Pipeline, SVM, SVC
 
-## (9) SparkOverload - Using Spark to Analyze StackOverflow Data
+## (9) SparkOverflow - Using Spark to Analyze StackOverflow Data
 
 StackOverflow is a collaboratively edited question-and-answer site originally focused on programming topics. Because of the variety of features tracked, including a variety of feedback metrics, it allows for some open-ended analysis of user behavior on the site.
 
@@ -139,3 +141,21 @@ StackExchange (the parent organization) provides an anonymized <a href="https://
 (c) Run on GCP once your testing and development are done. 
 
 _TOOLS USED_: Spark - PySpark and Scala, HDFS, Google Cloud Platform
+
+----
+## A summary of my performance across the assignments (each assignment contained varrying number of questions). A grade of 1.0 indicates no variance from the reference solution outpout and performance, a grade of 0.9 is needed throughout. _(ETL / DW = Extract, Transact, Load & DataWarehousing; ML = Machine Learning, VIZ = DataViz, DC = Distributed Computing, AML = Advanced Machine Learning)_
+
+| Week | Category 	| Assignment | Avg Grade |
+| --- | -------------:| -----:|  -----:|
+|1 |	ETL / DW	|1, 2 |	98.4 |
+|2 | ML	| 3	|96.8|
+|3|	DC	|4|	97.8|
+|4|	VIZ|	5|	1|
+|5|	AML|	6|	96.3|
+|6|	AML|	7|	107.1|
+|7|	AML|	8|	95.6|
+|8|	DC|	9|	99.4|
+
+My Gradebook:
+
+![data viz](https://github.com/beilmanmich/datasci_projects/blob/master/GradeBook_TDI.gif)
