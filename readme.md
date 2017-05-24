@@ -147,15 +147,15 @@ _TOOLS USED_: Spark - PySpark and Scala, HDFS, Google Cloud Platform
 
 | Week | Category 	| Assignment | Avg Grade |
 | --- | -------------:| -----:|  -----:|
-|1 |	ETL / DW	|1, 2 |	98.4 |
-|2 | ML	| 3	|96.8|
-|3|	DC	|4|	97.8|
-|4|	VIZ|	5|	1|
-|5|	AML|	6|	96.3|
-|6|	AML|	7|	107.1|
-|7|	AML|	8|	95.6|
-|8|	DC|	9|	99.4|
+|1 |	ETL / DW	|1, 2 |	.984 |
+|2 | ML	| 3	|.968|
+|3|	DC	|4|	.978|
+|4|	VIZ|	5|	1.0 |
+|5|	AML|	6|	.963|
+|6|	AML|	7|	1.071|
+|7|	AML|	8|	.956|
+|8|	DC|	9|	.994|
 
 My Gradebook:
 
-![data viz](https://github.com/beilmanmich/datasci_projects/blob/master/GradeBook_TDI.gif)
+![grade book](https://github.com/beilmanmich/datasci_projects/blob/master/GradeBook_TDI.png)
