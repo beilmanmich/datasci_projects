@@ -1,5 +1,5 @@
 # miniprojects
-A description of weekly projects completed Spring 2017 for The Data Incubator Fellowship. Linked detailed iPython walk-throughs forthcoming. Please feel free to inquire for more detailed code.
+A description of weekly projects completed throughout Spring 2017 for The Data Incubator Fellowship. Linked detailed iPython walk-throughs forthcoming. Please feel free to inquire for more detailed code, out of respect for current and future fellows no direct answers will be posted.
 
 ## (1) Using Graph and Network Theory To Investigate the NYC Social Elite
 
@@ -70,7 +70,6 @@ print 'Ensemble Model RMSE: ', mean_squared_error(stars_test,preds)**0.5
 print 'Ensemble Model MAE: ', mean_absolute_error(stars_test,preds)
 print 'Ensemble Model R^2: ', r2_score(stars_test,preds)
 ```
-----
 ----
 ```
 [ 3.6706147   3.99940255  3.97274505  3.83213406  3.79369298  3.6706147
