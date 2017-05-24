@@ -17,7 +17,7 @@ _TOOLS USED_: Python - BeutifulSoup (webscrape), regex (cleaning website data), 
 The city of New York inspect roughly 24,000 restaraunts a year and assigns a grade to restaurants after each inspection, over a decade this creates a public dataset of 531,935 records. I used PostGreSQL and Pandas to parse and analyze a decade worth of NYC Restaurant Inspections data. I extracted different slices -- determining the grade distribution by zipcode, borough, and cuisine. I also found which cuisines tended to have a disproportionate number of which violations.
 
 <center><img src="https://github.com/beilmanmich/datasci_projects/blob/master/carto_map.png"></a></center><br>
-A map view of scores by zipcode, where higher intensity reds are equivalent to higher scores, via <a href="http://cdb.io/1dkAG2o">cartodb</a>.
+A map view of scores by zipcode, where higher intensity reds are equivalent to higher scores, via cartodb.
 
 _TOOLS USED_: Pandas, numPy, psql, SQLAlchemy, matplotlib, seaborn
 
@@ -25,7 +25,7 @@ _TOOLS USED_: Pandas, numPy, psql, SQLAlchemy, matplotlib, seaborn
 
 I attempted to predict a new venue's popularity from information available when the venue opens. <a href="https://www.yelp.com/developers/documentation/v2/business">The dataset</a> contains unstructured meta data (json) about each venue (city, latitude/longitude, category descriptions, etc), and a star rating. After data munging and feature variable creation, I used Python's <a ref="http://scikit-learn.org/stable/modules/linear_model.html">Scikit Learn</a> <a ref="http://scikit-learn.org/stable/modules/neighbors.html">libraries</a> to create transformations to allow us to model feature data, since the data is unstructured this required json parsing to create flattened nested dictionaries. I then used Scikit Learn to create training and test data to develop several different Machine Learning algorithms.
 
-The predictive algorithms revealed three weak predictors (city, lat/long, attributes) and one fair predictor (categories). I ultimately used a <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html">Feature Union</a> approach and created an <a ref="http://scikit-learn.org/stable/modules/ensemble.html">ensemble regressor</a> for the final model. In Python after creating our custom data <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.base.TransformerMixin.html">transformers</a>, the final <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html">pipeline</a> looks like this:
+The predictive algorithms revealed three weak predictors (city, lat/long, attributes) and one fair predictor (categories). I ultimately used a <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html">FeatureUnion</a> approach and created an <a ref="http://scikit-learn.org/stable/modules/ensemble.html">ensemble regressor</a> for the final model. In Python after creating our custom data <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.base.TransformerMixin.html">transformers</a>, the final <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html">pipeline</a> looks like this:
 
 ```
 pipeline = Pipeline([
