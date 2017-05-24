@@ -114,7 +114,7 @@ where ![alt text](https://latex.codecogs.com/gif.latex?%24k%24) and ![alt text](
 
 which is linear in ![alt text](https://latex.codecogs.com/gif.latex?%24A%24) and ![alt text](https://latex.codecogs.com/gif.latex?%24B%24).
 
-_TOOLS USED_: Pands, sklearn - BaseEstimator, TransformerMixin,  DictBectorizer, Pipeline, LogisticRegression, KNeighborsRegressor
+_TOOLS USED_: Pandas, sklearn - BaseEstimator, TransformerMixin,  DictBectorizer, Pipeline, LogisticRegression, KNeighborsRegressor
 
 ## (7) Using NLP to Predict Yelp Ratings
 
