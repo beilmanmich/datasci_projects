@@ -142,7 +142,7 @@ StackExchange (the parent organization) provides an anonymized <a href="https://
 _TOOLS USED_: Spark - PySpark and Scala, HDFS, Google Cloud Platform
 
 ----
-## A summary of my performance across the assignments 
+## A summary of my performance across projects
 
 A grade of 1.0 indicates no variance from the reference solution outpout and performance, a grade of 0.9 is needed throughout. _(ETL / DW = Extract, Transact, Load & DataWarehousing; ML = Machine Learning, VIZ = DataViz, DC = Distributed Computing, AML = Advanced Machine Learning)_
 
