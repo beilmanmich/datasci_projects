@@ -124,7 +124,7 @@ _TOOLS USED_: nltk, nltk.tokenize, nltk.WordNetLemmatizer, Textblob, dill, numpy
 
 ## (8) Using ML to Categorize Music Samples
 
-Music offers an extremely rich and interesting playing field. The objective of this miniproject is to develop models that are able to recognize the genre of a musical piece (electronic, folkcountry, jazz, raphiphop, rock). first from pre-computed features and then working from the raw waveform (files with 5-10 seconds of a music sample). This is a typical example of a classification problem on time series data. 
+Music offers an extremely rich and interesting playing field. The objective of this miniproject is to develop models that are able to recognize the genre of a musical piece (electronic, folkcountry, jazz, raphiphop, rock), first from pre-computed features and then working from the raw waveform (files with 5-10 seconds of a music sample). This is a typical example of a classification problem on time series data. 
 
 _TOOLS USED_: numpy, scipy, Librosa, audioread, audioop, pandas, dill, sklearn - preprocessing, ensemble, LabelEncoder, DecisionTreeClassifier, StandardScaler, normalize, PCA, RandomForestClassifier, Pipeline, SVM, SVC
 
