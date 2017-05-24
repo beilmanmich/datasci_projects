@@ -108,9 +108,7 @@ The simplest (and perhaps most robust) is to have a set of indicator variables. 
 
 ![math eqn](https://latex.codecogs.com/gif.latex?%24%24%20y_t%20%3D%20y_0%20%5Csin%5Cleft%282%5Cpi%5Cfrac%7Bt%20-%20t_0%7D%7BT%7D%5Cright%29%20&plus;%20%5Cepsilon%20%24%24)
 
-where ![alt text](https://latex.codecogs.com/gif.latex?%24k%24) and ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24) are parameters to be learned and ![alt text](https://latex.codecogs.com/gif.latex?%24T%24) is one year for seasonal variation.  While this is linear in ![alt text](https://latex.codecogs.com/gif.latex?%24y_0%24), it is not linear in ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24).
-
-However, we know from Fourier analysis, that the above is equivalent to
+where ![alt text](https://latex.codecogs.com/gif.latex?%24k%24) and ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24) are parameters to be learned and ![alt text](https://latex.codecogs.com/gif.latex?%24T%24) is one year for seasonal variation.  While this is linear in ![alt text](https://latex.codecogs.com/gif.latex?%24y_0%24), it is not linear in ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24). However, we know from Fourier analysis, that the above is equivalent to
 
 ![math eqn2](https://latex.codecogs.com/gif.latex?%24%24%20y_t%20%3D%20A%20%5Csin%5Cleft%282%5Cpi%5Cfrac%7Bt%7D%7BT%7D%5Cright%29%20&plus;%20B%20%5Ccos%5Cleft%282%5Cpi%5Cfrac%7Bt%7D%7BT%7D%5Cright%29%20&plus;%20%5Cepsilon%20%24%24)
 
