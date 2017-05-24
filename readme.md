@@ -16,7 +16,7 @@ _TOOLS USED_: Python - BeutifulSoup (webscrape), regex (cleaning website data), 
 
 The city of New York inspect roughly 24,000 restaraunts a year and assigns a grade to restaurants after each inspection, this creates a public dataset of 531,935 records. I used PostGreSQL and Pandas to parse and analyze four years worth of  NYC Restaurant Inspections data. I extracted different slices -- determining the grade distribution by zipcode, borough, and cuisine. I also found which cuisines tended to have a disproportionate number of which violations.
 
-<center><a href="http://cdb.io/1dkAG2o"><img src="https://github.com/beilmanmich/datasci_projects/blob/master/carto_map.png"></a></center><br>
+<center><img src="https://github.com/beilmanmich/datasci_projects/blob/master/carto_map.png"></a></center><br>
 A map view of scores by zipcode, where higher intensity reds are equivalent to higher scores, via <a href="http://cdb.io/1dkAG2o">cartodb</a>.
 
 _TOOLS USED_: Pandas, numPy, psql, SQLAlchemy, matplotlib, seaborn
