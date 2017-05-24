@@ -14,7 +14,7 @@ _TOOLS USED_: Python - BeutifulSoup (webscrape), regex (cleaning website data), 
 
 ## (2) Using PostGreSQL and Pandas To Investigate NYC Restaurants
 
-The city of New York inspect roughly 24,000 restaraunts a year and assigns a grade to restaurants after each inspection, this creates a public dataset of 531,935 records. I used PostGreSQL and Pandas to parse and analyze four years worth of  NYC Restaurant Inspections data. I extracted different slices -- determining the grade distribution by zipcode, borough, and cuisine. I also found which cuisines tended to have a disproportionate number of which violations.
+The city of New York inspect roughly 24,000 restaraunts a year and assigns a grade to restaurants after each inspection, over a decade this creates a public dataset of 531,935 records. I used PostGreSQL and Pandas to parse and analyze a decade worth of NYC Restaurant Inspections data. I extracted different slices -- determining the grade distribution by zipcode, borough, and cuisine. I also found which cuisines tended to have a disproportionate number of which violations.
 
 <center><img src="https://github.com/beilmanmich/datasci_projects/blob/master/carto_map.png"></a></center><br>
 A map view of scores by zipcode, where higher intensity reds are equivalent to higher scores, via <a href="http://cdb.io/1dkAG2o">cartodb</a>.
@@ -23,9 +23,9 @@ _TOOLS USED_: Pandas, numPy, psql, SQLAlchemy, matplotlib, seaborn
 
 ## (3) Using Semi-Structured Data to Predict Yelp Ratings
 
-I attempted to predict a new venue's popularity from information available when the venue opens. <a href="https://www.yelp.com/developers/documentation/v2/business">The dataset</a> contains unstructured meta data (json) about each venue (city, latitude/longitude, category descriptions, etc), and a star rating. After data munging and feature variable creation, I used Python's Scikit Learn libraries to  create transformations to allow us to model feature data, since the data is unstructured this required json parsing to create flattened nested dictionaries. I then used Scikit Learn to create training and test data to develop several different Machine Learning algorithms.
+I attempted to predict a new venue's popularity from information available when the venue opens. <a href="https://www.yelp.com/developers/documentation/v2/business">The dataset</a> contains unstructured meta data (json) about each venue (city, latitude/longitude, category descriptions, etc), and a star rating. After data munging and feature variable creation, I used Python's <a ref="http://scikit-learn.org/stable/modules/linear_model.html">Scikit Learn</a> <a ref="http://scikit-learn.org/stable/modules/neighbors.html">libraries</a> to create transformations to allow us to model feature data, since the data is unstructured this required json parsing to create flattened nested dictionaries. I then used Scikit Learn to create training and test data to develop several different Machine Learning algorithms.
 
-The predictive algorithms revealed three weak predictors (city, lat/long, attributes) and one fair predictor (categories). I ultimately used FeatureUnion methodology and created and ensemble regressor for the final model. In Python after creating our custom data transformers, the final pipeline looks like this:
+The predictive algorithms revealed three weak predictors (city, lat/long, attributes) and one fair predictor (categories). I ultimately used a <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html">FeatureUnion</a> approach and created an <a ref="http://scikit-learn.org/stable/modules/ensemble.html">ensemble regressor</a> for the final model. In Python after creating our custom data <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.base.TransformerMixin.html">transformers</a>, the final <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html">pipeline</a> looks like this:
 
 ```
 pipeline = Pipeline([
@@ -90,7 +90,7 @@ _TOOLS USED_: numpy, seaborn, pandas, dill, sklearn - KNeighborsRegressor, linea
 
 I scraped the entire English Wikipedia to determine its <a href="https://github.com/beilmanmich/datasci_projects/blob/master/MapReduce/top_100_words.py">most frequently used words</a>. I then collected <a href="https://github.com/beilmanmich/datasci_projects/blob/master/MapReduce/linkstats.py">link statistics</a> (mean, standard deviations, percentiles) for the unique links on each page, and <a href="https://github.com/beilmanmich/datasci_projects/blob/master/MapReduce/double_link_stats.py">found the top linked concepts</a> by examining doublelinks.
 
-Distributed computing is ideal for these types of tasks, as they allow 
+Distributed computing is ideal for these types of tasks, as they allow for the distributed processing of large data sets across clusters of computers using simple programming models. Hadoop grew out of an open-source search engine called Nutch, developed by Doug Cutting and Mike Cafarella. Back in the early days of the Internet, the pair wanted to invent a way to return web search results faster by distributing data and calculations across different computers so multiple tasks could be executed at the same time.
 
 _TOOLS USED_: Hadoop/HDFS, MapReduce, MRJob, XML, BeutifulSoup, Custom Builty XML Parser, Google Cloud Platform, AWS
 
@@ -100,7 +100,7 @@ This project required fellows to create a webhosted interactive data visualizati
 
 ![data viz](https://github.com/beilmanmich/datasci_projects/blob/master/viz_demo.gif)
 
-_TOOLS USED_: ds.js, html, css, java, Flask, MongoDB, Numpy, Heroku
+_TOOLS USED_: d3.js, dc.js, html, css, java, Flask, MongoDB, Numpy, Heroku
 
 ## (6) Using Time Series Machine Learning to Predict the Weather
 
@@ -110,7 +110,7 @@ The simplest (and perhaps most robust) is to have a set of indicator variables. 
 
 ![math eqn](https://latex.codecogs.com/gif.latex?%24%24%20y_t%20%3D%20y_0%20%5Csin%5Cleft%282%5Cpi%5Cfrac%7Bt%20-%20t_0%7D%7BT%7D%5Cright%29%20&plus;%20%5Cepsilon%20%24%24)
 
-where ![alt text](https://latex.codecogs.com/gif.latex?%24k%24) and ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24) are parameters to be learned and ![alt text](https://latex.codecogs.com/gif.latex?%24T%24) is one year for seasonal variation.  While this is linear in ![alt text](https://latex.codecogs.com/gif.latex?%24y_0%24), it is not linear in ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24). However, we know from Fourier analysis, that the above is equivalent to
+where ![alt text](https://latex.codecogs.com/gif.latex?%24k%24) and ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24) are parameters to be learned and ![alt text](https://latex.codecogs.com/gif.latex?%24T%24) is one year for seasonal variation.  While this is linear in ![alt text](https://latex.codecogs.com/gif.latex?%24y_0%24), it is not linear in ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24). However, we know from <a href="https://en.wikipedia.org/wiki/Fourier_analysis">Fourier analysis</a>, that the above is equivalent to
 
 ![math eqn2](https://latex.codecogs.com/gif.latex?%24%24%20y_t%20%3D%20A%20%5Csin%5Cleft%282%5Cpi%5Cfrac%7Bt%7D%7BT%7D%5Cright%29%20&plus;%20B%20%5Ccos%5Cleft%282%5Cpi%5Cfrac%7Bt%7D%7BT%7D%5Cright%29%20&plus;%20%5Cepsilon%20%24%24)
 
@@ -120,7 +120,7 @@ _TOOLS USED_: Pandas, sklearn - BaseEstimator, TransformerMixin,  DictBectorizer
 
 ## (7) Using NLP to Predict Yelp Ratings
 
-I then returned to the Yelp Data to explore how much information was contained in the review texts, whether they could more accurately predict ratings. This project allowed a rich dataset to practice natural language processing (NLP) as the unstructured data contains the text record of a written yelp review. Since I was working with over one million reviews and a design matrix of over a million feature-words, scalability was an overriding factor during model selection, especially since the model had to fit within Heroku's memory constraints. However, the predictive power of even a basic out-of-the-box ridge regression was magnitudes greater than that of the models in the previous section (yielding a score of over .6).
+I then returned to the Yelp Data to explore how much information was contained in the review texts, whether they could more accurately predict ratings. This project allowed a rich dataset to practice <a href="http://www.kdnuggets.com/2015/12/natural-language-processing-101.html">natural language processing</a> (NLP) as the unstructured data contains the text record of a written yelp review. Since I was working with over one million reviews and a design matrix of over a million feature-words, scalability was an overriding factor during model selection, especially since the model had to fit within Heroku's memory constraints. However, the predictive power of even a basic out-of-the-box ridge regression was magnitudes greater than that of the models in the previous section (yielding a score of over .6).
 
 _TOOLS USED_: nltk, nltk.tokenize, nltk.WordNetLemmatizer, Textblob, dill, numpy, pandas, seaborn, matplotlib.pylab, sklearn - linear_models, externals, joblib, cross_validation, grid_searchCV, FeatureUnion, Pipeline, CountVectorizer, HashingVectorizer, Tfidf, Tfidf_vectorizer
 
@@ -134,7 +134,7 @@ _TOOLS USED_: numpy, scipy, Librosa, audioread, audioop, pandas, dill, sklearn -
 
 StackOverflow is a collaboratively edited question-and-answer site originally focused on programming topics. Because of the variety of features tracked, including a variety of feedback metrics, it allows for some open-ended analysis of user behavior on the site.
 
-StackExchange (the parent organization) provides an anonymized <a href="https://archive.org/details/stackexchange">data dump</a>, this project  used Spark to perform data manipulation, analysis, and machine learning on this dataset. Using PySpark and Google Cloud Platform, I was able to perform dsitributed computing on a massive dataset of 9.6GB, unstructured in XML, spanning 341 seperate files. Using Python's Scala API my example workflow is as follows:
+StackExchange (the parent organization) provides an anonymized <a href="https://archive.org/details/stackexchange">data dump</a>, this project  used Spark to perform data manipulation, analysis, and machine learning on this dataset. Similar to the MapReduce project, this is an ideal use for distributed computing. <a href="https://spark.apache.org/">Spark</a> is Hadoop's bigger, better, stronger, faster cousin -- and runs with the ability to cache, significantly increasing the speed over Hadoop.  Using <a ref="https://spark.apache.org/docs/0.9.0/python-programming-guide.html">PySpark</a> and <a ref="https://cloud.google.com/">Google Cloud Platform</a>, I was able to perform dsitributed computing on a massive dataset of 9.6GB, unstructured in XML, spanning 341 seperate files. Using Python's Scala API my example workflow is as follows:
 
 (a) Edit source code in your main.py file, classes in a separate classes.py (Class definitions need to be written in a separate file and then included at runtime.)
 (b) Run locally on a chunk using eg. `$SPARK_HOME/bin/spark-submit --py-files src/classes.py src/main.py data/stats results/stats/`
