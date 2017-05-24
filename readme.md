@@ -107,15 +107,14 @@ Time series prediction presents its own challenges which are different from mach
 The simplest (and perhaps most robust) is to have a set of indicator variables. That is, make the assumption that the temperature at any given time is a function of only the month of the year and the hour of the day, and use that to predict the temperature value. A more complex approach is to fit our model to the time series curve. Since we know that temperature is roughly sinusoidal, we know that a resonable model might be:
 
 ![math eqn](https://latex.codecogs.com/gif.latex?%24%24%20y_t%20%3D%20y_0%20%5Csin%5Cleft%282%5Cpi%5Cfrac%7Bt%20-%20t_0%7D%7BT%7D%5Cright%29%20&plus;%20%5Cepsilon%20%24%24)
-$$ y_t = y_0 \sin\left(2\pi\frac{t - t_0}{T}\right) + \epsilon $$
 
-where $k$ ![alt text](https://latex.codecogs.com/gif.latex?%24k%24) and $t_0$ ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24) are parameters to be learned and $T$ ![alt text](https://latex.codecogs.com/gif.latex?%24T%24) is one year for seasonal variation.  While this is linear in $y_0$ ![alt text](https://latex.codecogs.com/gif.latex?%24y_0%24), it is not linear in $t_0$ ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24). However, we know from Fourier analysis, that the above is
-equivalent to
+where ![alt text](https://latex.codecogs.com/gif.latex?%24k%24) and ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24) are parameters to be learned and ![alt text](https://latex.codecogs.com/gif.latex?%24T%24) is one year for seasonal variation.  While this is linear in ![alt text](https://latex.codecogs.com/gif.latex?%24y_0%24), it is not linear in ![alt text](https://latex.codecogs.com/gif.latex?%24t_0%24).
+
+However, we know from Fourier analysis, that the above is equivalent to
 
 ![math eqn2](https://latex.codecogs.com/gif.latex?%24%24%20y_t%20%3D%20A%20%5Csin%5Cleft%282%5Cpi%5Cfrac%7Bt%7D%7BT%7D%5Cright%29%20&plus;%20B%20%5Ccos%5Cleft%282%5Cpi%5Cfrac%7Bt%7D%7BT%7D%5Cright%29%20&plus;%20%5Cepsilon%20%24%24)
-$$ y_t = A \sin\left(2\pi\frac{t}{T}\right) + B \cos\left(2\pi\frac{t}{T}\right) + \epsilon $$
 
-which is linear in $A$ ![alt text](https://latex.codecogs.com/gif.latex?%24A%24) and $B$ ![alt text](https://latex.codecogs.com/gif.latex?%24B%24).
+which is linear in ![alt text](https://latex.codecogs.com/gif.latex?%24A%24) and ![alt text](https://latex.codecogs.com/gif.latex?%24B%24).
 
 TOOLS USED: Pands, sklearn - BaseEstimator, TransformerMixin,  DictBectorizer, Pipeline, LogisticRegression, KNeighborsRegressor
 
