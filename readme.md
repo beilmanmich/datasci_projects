@@ -8,7 +8,7 @@ A description of weekly projects completed Spring 2017 for The Data Incubator Fe
 
 In this project, I investigate these connections between the NYC elite. I determine who the most socially popular and influential people are, as well as pairs with the strongest connections. (The latter analysis picks up the obvious  -- marriages and family ties -- as well as connections not readily apparent, such as affairs and infidelities.) Methodologically this was completed by scraping all website pages for photo captions, total number of valid captions was 93,093. These captions were then parsed to return unique names, revealing a total of 113,031 names in the social network. Finally, I performed the graph analysis using networkx. The graph visualization can be viewed in the screenshot below.
 
-Tools used: Python - BeutifulSoup (webscrape), regex (cleaning website data), networkx (graph/viz)
+_TOOLS USED_: Python - BeutifulSoup (webscrape), regex (cleaning website data), networkx (graph/viz)
 
 ![network graph](https://github.com/beilmanmich/datasci_projects/blob/master/network_graph.png)
 
@@ -19,7 +19,7 @@ The city of New York inspect roughly 24,000 restaraunts a year and assigns a gra
 <center><a href="http://cdb.io/1dkAG2o"><img src="https://github.com/beilmanmich/datasci_projects/blob/master/carto_map.png"></a></center><br>
 A map view of scores by zipcode, where higher intensity reds are equivalent to higher scores, via <a href="http://cdb.io/1dkAG2o">cartodb</a>.
 
-TOOLS USED: Pandas, numPy, psql, SQLAlchemy, matplotlib, seaborn
+_TOOLS USED_: Pandas, numPy, psql, SQLAlchemy, matplotlib, seaborn
 
 ## (3) Using Semi-Structured Data to Predict Yelp Ratings
 
@@ -84,13 +84,13 @@ Ensemble Model R^2:  0.0789390332998
 
 We have a model that predicts a star rating based on city, lat/lon, category and venue attributes (178 possible). Despite our efforts our model has relatively low predictive power, as indicated by the low R^2 value.
 
-TOOLS USED: numpy, seaborn, pandas, dill, sklearn - KNeighborsRegressor, linear_model, feature_extraction, neighbors, cross_validation, grid_search, train_test_split, numpy, matplotlib
+_TOOLS USED_: numpy, seaborn, pandas, dill, sklearn - KNeighborsRegressor, linear_model, feature_extraction, neighbors, cross_validation, grid_search, train_test_split, numpy, matplotlib
 
 ## (4) Analyzing Wikipedia via MapReduce
 
 I scraped the entire English Wikipedia to determine its <a href="https://github.com/beilmanmich/datasci_projects/blob/master/MapReduce/top_100_words.py">most frequently used words</a>. I then collected <a href="https://github.com/beilmanmich/datasci_projects/blob/master/MapReduce/linkstats.py">link statistics</a> (mean, standard deviations, percentiles) for the unique links on each page, and <a href="https://github.com/beilmanmich/datasci_projects/blob/master/MapReduce/double_link_stats.py">found the top linked concepts</a> by examining doublelinks.
 
-TOOLS USED: Hadoop/HDFS, MapReduce, MRJob, XML, BeutifulSoup, Custom Builty XML Parser
+_TOOLS USED_: Hadoop/HDFS, MapReduce, MRJob, XML, BeutifulSoup, Custom Builty XML Parser, Google Cloud Platform, AWS
 
 ## (5) DataViz
 
@@ -98,7 +98,7 @@ This project required fellows to create a webhosted interactive data visualizati
 
 ![data viz](https://github.com/beilmanmich/datasci_projects/blob/master/viz_demo.gif)
 
-TOOLS USED: ds.js, html, css, java, Flask, MongoDB, Numpy, Heroku
+_TOOLS USED_: ds.js, html, css, java, Flask, MongoDB, Numpy, Heroku
 
 ## (6) Using Time Series Machine Learning to Predict the Weather
 
@@ -116,19 +116,19 @@ However, we know from Fourier analysis, that the above is equivalent to
 
 which is linear in ![alt text](https://latex.codecogs.com/gif.latex?%24A%24) and ![alt text](https://latex.codecogs.com/gif.latex?%24B%24).
 
-TOOLS USED: Pands, sklearn - BaseEstimator, TransformerMixin,  DictBectorizer, Pipeline, LogisticRegression, KNeighborsRegressor
+_TOOLS USED_: Pands, sklearn - BaseEstimator, TransformerMixin,  DictBectorizer, Pipeline, LogisticRegression, KNeighborsRegressor
 
 ## (7) Using NLP to Predict Yelp Ratings
 
 I then returned to the Yelp Data to explore how much information was contained in the review texts, whether they could more accurately predict ratings. This project allowed a rich dataset to practice natural language processing (NLP) as the unstructured data contains the text record of a written yelp review. Since I was working with over one million reviews and a design matrix of over a million feature-words, scalability was an overriding factor during model selection, especially since the model had to fit within Heroku's memory constraints. However, the predictive power of even a basic out-of-the-box ridge regression was magnitudes greater than that of the models in the previous section (yielding a score of over .6).
 
-TOOLS USED: nltk, nltk.tokenize, nltk.WordNetLemmatizer, Textblob, dill, numpy, pandas, seaborn, matplotlib.pylab, sklearn - linear_models, externals, joblib, cross_validation, grid_searchCV, FeatureUnion, Pipeline, CountVectorizer, HashingVectorizer, Tfidf, Tfidf_vectorizer
+_TOOLS USED_: nltk, nltk.tokenize, nltk.WordNetLemmatizer, Textblob, dill, numpy, pandas, seaborn, matplotlib.pylab, sklearn - linear_models, externals, joblib, cross_validation, grid_searchCV, FeatureUnion, Pipeline, CountVectorizer, HashingVectorizer, Tfidf, Tfidf_vectorizer
 
 ## (8) Using ML to Categorize Music Samples
 
 Music offers an extremely rich and interesting playing field. The objective of this miniproject is to develop models that are able to recognize the genre of a musical piece (electronic, folkcountry, jazz, raphiphop, rock). first from pre-computed features and then working from the raw waveform (files with 5-10 seconds of a music sample). This is a typical example of a classification problem on time series data. 
 
-TOOLS USED: numpy, scipy, Librosa, audioread, audioop, pandas, dill, sklearn - preprocessing, ensemble, LabelEncoder, DecisionTreeClassifier, StandardScaler, normalize, PCA, RandomForestClassifier, Pipeline, SVM, SVC
+_TOOLS USED_: numpy, scipy, Librosa, audioread, audioop, pandas, dill, sklearn - preprocessing, ensemble, LabelEncoder, DecisionTreeClassifier, StandardScaler, normalize, PCA, RandomForestClassifier, Pipeline, SVM, SVC
 
 ## (9) SparkOverload - Using Spark to Analyze StackOverflow Data
 
@@ -139,3 +139,5 @@ StackExchange (the parent organization) provides an anonymized <a href="https://
 (a) Edit source code in your main.py file, classes in a separate classes.py (Class definitions need to be written in a separate file and then included at runtime.)
 (b) Run locally on a chunk using eg. `$SPARK_HOME/bin/spark-submit --py-files src/classes.py src/main.py data/stats results/stats/`
 (c) Run on GCP once your testing and development are done. 
+
+_TOOLS USED_: Spark - PySpark and Scala, HDFS, Google Cloud Platform
