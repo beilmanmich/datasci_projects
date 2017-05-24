@@ -25,7 +25,7 @@ _TOOLS USED_: Pandas, numPy, psql, SQLAlchemy, matplotlib, seaborn
 
 I attempted to predict a new venue's popularity from information available when the venue opens. <a href="https://www.yelp.com/developers/documentation/v2/business">The dataset</a> contains unstructured meta data (json) about each venue (city, latitude/longitude, category descriptions, etc), and a star rating. After data munging and feature variable creation, I used Python's <a ref="http://scikit-learn.org/stable/modules/linear_model.html">Scikit Learn</a> <a ref="http://scikit-learn.org/stable/modules/neighbors.html">libraries</a> to create transformations to allow us to model feature data, since the data is unstructured this required json parsing to create flattened nested dictionaries. I then used Scikit Learn to create training and test data to develop several different Machine Learning algorithms.
 
-The predictive algorithms revealed three weak predictors (city, lat/long, attributes) and one fair predictor (categories). I ultimately used a <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html">FeatureUnion</a> approach and created an <a ref="http://scikit-learn.org/stable/modules/ensemble.html">ensemble regressor</a> for the final model. In Python after creating our custom data <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.base.TransformerMixin.html">transformers</a>, the final <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html">pipeline</a> looks like this:
+The predictive algorithms revealed three weak predictors (city, lat/long, attributes) and one fair predictor (categories). I ultimately used a <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html">Feature Union</a> approach and created an <a ref="http://scikit-learn.org/stable/modules/ensemble.html">ensemble regressor</a> for the final model. In Python after creating our custom data <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.base.TransformerMixin.html">transformers</a>, the final <a ref="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html">pipeline</a> looks like this:
 
 ```
 pipeline = Pipeline([
@@ -144,7 +144,7 @@ _TOOLS USED_: Spark - PySpark and Scala, HDFS, Google Cloud Platform
 ----
 ## A summary of my performance across projects
 
-A grade of 1.0 indicates no variance from the reference solution outpout and performance, a grade of 0.9 is needed throughout. _(ETL / DW = Extract, Transact, Load & DataWarehousing; ML = Machine Learning, VIZ = DataViz, DC = Distributed Computing, AML = Advanced Machine Learning)_
+A grade of 1.0 indicates no variance from the referenced solution outpout and performance, a grade of 0.9 is needed throughout. _(ETL / DW = Extract, Transact, Load & DataWarehousing; ML = Machine Learning, VIZ = DataViz, DC = Distributed Computing, AML = Advanced Machine Learning)_
 
 | Week | Category 	| Assignment | Avg Grade |
 | --- | -------------:| -----:|  -----:|
