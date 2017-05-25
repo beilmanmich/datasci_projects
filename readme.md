@@ -146,7 +146,7 @@ _TOOLS USED_: Spark - PySpark and Scala, HDFS, Google Cloud Platform
 
 A grade of 1.0 indicates no variance from the referenced solution outpout and performance, a grade of 0.9 is needed throughout. _(ETL / DW = Extract, Transact, Load & DataWarehousing; ML = Machine Learning, VIZ = DataViz, DC = Distributed Computing, AML = Advanced Machine Learning)_
 
-| Week | Category 	| Assignment | Avg Grade |
+| Week | Category 	| Project | Avg Grade |
 | --- | -------------:| -----:|  -----:|
 |1 |	ETL / DW	|1, 2 |	.984 |
 |2 | ML	| 3	|.968|
