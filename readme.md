@@ -23,7 +23,7 @@ A map view of scores by zipcode, where higher intensity reds are equivalent to h
 
 _TOOLS USED_: **psql**, SQLlite, SQLAlchemy, Pandas, numPy, matplotlib, seaborn, bokeh
 
-## (3) Using Semi-Structured Data to Predict Yelp Ratings
+## <a name="head_ref3"></a>(3) Using Semi-Structured Data to Predict Yelp Ratings
 
 I attempted to predict a new venue's popularity from [Yelp](https://www.yelp.com/sf) information available when the venue opens. <a href="https://www.yelp.com/developers/documentation/v2/business">The dataset</a> contains unstructured meta data about each venue (city, latitude/longitude, category descriptions, etc), and a star rating. After data munging and feature variable creation, I used Python's [Scikit Learn](http://scikit-learn.org/stable/modules/linear_model.html) [libraries](http://scikit-learn.org/stable/modules/neighbors.html) to create transformations to allow us to model feature data, since the data is unstructured this required json parsing to create flattened nested dictionaries. I then used Scikit Learn to create training and test data to develop several different Machine Learning algorithms.
 
@@ -117,7 +117,7 @@ where ![alt text](https://latex.codecogs.com/gif.latex?%24k%24) and ![alt text](
 
 which is linear in ![alt text](https://latex.codecogs.com/gif.latex?%24A%24) and ![alt text](https://latex.codecogs.com/gif.latex?%24B%24).
 
-Creating the right transformers, similar to the Yelp ML project (3), allows us to create a model that can read select data points and create a prediction, in this instance a structured list of strings. With these in place this project created both non-fitted and fitted models as described above, a particular challenge provided itself in the context of the fitted model. Given the Fourier analysis, this approach required careful randomization of the training and test data to increase model accuracy and avoid overfitting. 
+Creating the right transformers, similar to the [Yelp ML](#head_ref3) project, allows us to create a model that can read select data points and create a prediction, in this instance a structured list of strings. With these in place this project created both non-fitted and fitted models as described above, a particular challenge provided itself in the context of the fitted model. Given the Fourier analysis, this approach required careful randomization of the training and test data to increase model accuracy and avoid overfitting. 
 
 _TOOLS USED_: **numpy**, **scipy** pandas, **sklearn** - BaseEstimator, TransformerMixin, Pipeline, LogisticRegression, KNeighborsRegressor
 
