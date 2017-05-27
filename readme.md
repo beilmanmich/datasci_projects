@@ -7,9 +7,9 @@ A description of weekly projects completed throughout Spring 2017 for The Data I
 
 In this project, I investigate these connections between the NYC elite. I determine who the most socially popular and influential people are, as well as pairs with the strongest connections. (The latter analysis picks up the obvious  -- marriages and family ties -- as well as connections not readily apparent, such as affairs and infidelities.) 
 
-Methodologically this was completed by scraping all website pages for photo captions, total number of valid captions was 93,093. These captions were then parsed to return unique names, revealing a total of 113,031 names in the social network. Finally, I performed the graph analysis using networkx. The graph visualization can be viewed in the screenshot below.
+Methodologically this was completed by using [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) to scrape all NYSD website pages for photo captions, total number of valid captions was 93,093. These captions were then parsed to return unique names, revealing a total of 113,031 names in the social network. Finally, I performed the graph analysis using networkx. The graph visualization can be viewed in the screenshot below.
 
-_TOOLS USED_: Python - *BeautifulSoup* (webscrape), regex (cleaning website data), networkx (graph/viz), d3.js (viz), bokeh, seaboard, matplotlib
+_TOOLS USED_: Python - **BeautifulSoup** (webscrape), **SQLlite**, regex (cleaning website data), networkx (graph/viz), d3.js (viz), bokeh, seaboard, matplotlib, CartoDB
 
 ![network graph](https://github.com/beilmanmich/datasci_projects/blob/master/network_graph.png)
 
@@ -21,7 +21,7 @@ The city of New York inspect roughly 24,000 restaurants a year and assigns a gra
 
 A map view of scores by zipcode, where higher intensity reds are equivalent to higher scores, via cartodb.
 
-_TOOLS USED_: *psql*, SQLlite, SQLAlchemy, Pandas, numPy, matplotlib, seaborn, bokeh
+_TOOLS USED_: **psql**, SQLlite, SQLAlchemy, Pandas, numPy, matplotlib, seaborn, bokeh
 
 ## (3) Using Semi-Structured Data to Predict Yelp Ratings
 
@@ -85,7 +85,7 @@ Ensemble Model R^2:  0.0789390332998
 
 We have a model that predicts a star rating based on city, lat/lon, category and venue attributes (178 possible). Despite our efforts our model has relatively low predictive power, as indicated by the low R^2 value.
 
-_TOOLS USED_: numpy, seaborn, pandas, dill, *sklearn* -  linear_model, feature_extraction, neighbors, cross_validation, grid_search, train_test_split
+_TOOLS USED_: numpy, seaborn, pandas, dill, **sklearn** -  linear_model, feature_extraction, neighbors, cross_validation, grid_search, train_test_split
 
 ## (4) Analyzing Wikipedia via MapReduce
 
@@ -93,7 +93,7 @@ I scraped the entire English Wikipedia to determine its <a href="https://github.
 
 Distributed computing is ideal for these types of tasks, as they allow for the distributed processing of large data sets across clusters of computers using simple programming models. <a href="http://hadoop.apache.org/">Hadoop</a> grew out of an open-source search engine called Nutch, developed by Doug Cutting and Mike Cafarella. Back in the early days of the Internet, the pair wanted to invent a way to return web search results faster by distributing data and calculations across different computers so multiple tasks could be executed at the same time. Hadoop Distributed File System (HDFS) is a distributed file system that provides high-throughput access (multi-terabyte data-sets) to application data, a Hadoop YARN is the framework for job scheduling and cluster resource management within the HDFS environment. With these two in place, one can run [MapReduce](https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html) jobs, which splits input data into independent chunks which are process by the _map tasks_ across large _clusters_ (thousands of nodes). Utilizing the [MRJob](https://github.com/Yelp/mrjob) Python package developed at Yelp, one can write MapReduce jobs in Python.
 
-_TOOLS USED_: *Hadoop/HDFS*, *MapReduce*, *MRJob*, XML, BeautifulSoup, custom built XML Parser, *Google Cloud Platform*, AWS
+_TOOLS USED_: Hadoop/HDFS, **MapReduce**, **MRJob**, BeautifulSoup, **Google Cloud Platform**, AWS
 
 ## (5) DataViz
 
@@ -101,7 +101,7 @@ This project required fellows to create a web-hosted interactive data visualizat
 
 ![data viz](https://github.com/beilmanmich/datasci_projects/blob/master/viz_demo.gif)
 
-_TOOLS USED_: *d3.js*, dc.js, html, css, java, *Flask*, *MongoDB*, pandas, *Heroku*
+_TOOLS USED_: **d3.js**, dc.js, html, css, java, **Flask**, **MongoDB**, pandas, **Heroku**
 
 ## (6) Using Time Series Machine Learning to Predict the Weather
 
@@ -119,13 +119,13 @@ which is linear in ![alt text](https://latex.codecogs.com/gif.latex?%24A%24) and
 
 Creating the right transformers, similar to the Yelp ML project (3), allows us to create a model that can read select data points and create a prediction, in this instance a structured list of strings. With these in place this project created both non-fitted and fitted models as described above, a particular challenge provided itself in the context of the fitted model. Given the Fourier analysis, this approach required careful randomization of the training and test data to increase model accuracy and avoid overfitting. 
 
-_TOOLS USED_: *numpy*, *scipy* pandas, *sklearn* - BaseEstimator, TransformerMixin, Pipeline, LogisticRegression, KNeighborsRegressor
+_TOOLS USED_: **numpy**, **scipy** pandas, **sklearn** - BaseEstimator, TransformerMixin, Pipeline, LogisticRegression, KNeighborsRegressor
 
 ## (7) Using NLP to Predict Yelp Ratings
 
 I then returned to the Yelp Data to explore how much information was contained in the review texts, whether they could more accurately predict ratings. This project allowed a rich dataset to practice <a href="http://www.kdnuggets.com/2015/12/natural-language-processing-101.html">natural language processing</a> (NLP) as the unstructured data contains the text record of a written yelp review. Since I was working with over one million reviews and a design matrix of over a million feature-words, scalability was an overriding factor during model selection, especially since the model had to fit within Heroku's memory constraints. However, the predictive power of even a basic out-of-the-box ridge regression was magnitudes greater than that of the models in the previous section (yielding a score of over .6).
 
-_TOOLS USED_: *nltk*, nltk.tokenize, nltk.WordNetLemmatizer, Textblob, dill, numpy, pandas, seaborn, matplotlib.pylab, *sklearn* - linear_models, externals, joblib, cross_validation, grid_searchCV, FeatureUnion, Pipeline, CountVectorizer, HashingVectorizer, Tfidf, Tfidf_vectorizer
+_TOOLS USED_: **nltk**, nltk.tokenize, nltk.WordNetLemmatizer, Textblob, dill, numpy, pandas, seaborn, matplotlib.pylab, **sklearn** - linear_models, externals, joblib, cross_validation, grid_searchCV, FeatureUnion, Pipeline, CountVectorizer, HashingVectorizer, Tfidf, Tfidf_vectorizer
 
 ## (8) Using ML to Categorize Music Samples
 
@@ -143,7 +143,7 @@ StackExchange (the parent organization) provides an anonymized <a href="https://
 (b) Run locally on a chunk using eg. `$SPARK_HOME/bin/spark-submit --py-files src/classes.py src/main.py data/stats results/stats/`
 (c) Run on GCP once your testing and development are done. 
 
-_TOOLS USED_: Spark - PySpark and Scala, HDFS, Google Cloud Platform
+_TOOLS USED_: Spark - **PySpark** and Scala, HDFS, Google Cloud Platform
 
 ----
 ## A summary of my performance
