@@ -11,13 +11,13 @@ Methodologically this was completed by using [BeautifulSoup](https://www.crummy.
 
 _TOOLS USED_: Python - **BeautifulSoup** (webscrape), **SQLlite**, regex (cleaning website data), networkx (graph/viz), d3.js (viz), bokeh, seaboard, matplotlib, CartoDB
 
-![network graph](https://github.com/beilmanmich/datasci_projects/blob/master/network_graph.png)
+![network graph](https://github.com/beilmanmich/datasci_projects/blob/master/images/network_graph.png)
 
 ## (2) Using PostGreSQL and Pandas To Investigate NYC Restaurants
 
 The city of New York inspect roughly 24,000 restaurants a year and assigns a grade to restaurants after each inspection, over a decade this creates a public dataset of 531,935 records. I used PostGreSQL and Pandas to parse and analyze a decade worth of NYC Restaurant Inspections data. I extracted different slices -- determining the grade distribution by zipcode, borough, and cuisine. I also found which cuisines tended to have a disproportionate number of which violations.
 
-![map image](https://github.com/beilmanmich/datasci_projects/blob/master/carto_map.png)
+![carto map](https://github.com/beilmanmich/datasci_projects/blob/master/images/carto_map.png)
 
 A map view of scores by zipcode, where higher intensity reds are equivalent to higher scores, via cartodb.
 
@@ -99,7 +99,7 @@ _TOOLS USED_: Hadoop/HDFS, **MapReduce**, **MRJob**, BeautifulSoup, **Google Clo
 
 This project required fellows to create a web-hosted interactive data visualization tool. My project analyzed historical project data from [DonorsChoose.org](https://www.donorschoose.org/), a dataset of 950,000 records (~8GB). More information on my project can be <a href="https://github.com/beilmanmich/donors_dashboard">found here</a>.
 
-![data viz](https://github.com/beilmanmich/datasci_projects/blob/master/viz_demo.gif)
+![data viz](https://github.com/beilmanmich/datasci_projects/blob/master/images/viz_demo.gif)
 
 _TOOLS USED_: **d3.js**, dc.js, html, css, java, **Flask**, **MongoDB**, pandas, **Heroku**
 
@@ -148,7 +148,7 @@ _TOOLS USED_: Spark - **PySpark** and Scala, HDFS, Google Cloud Platform
 ----
 ## A summary of my performance
 
-A grade of 1.0 indicates no variance from the referenced solution outpout and performance, a grade of 0.9 is needed throughout. _(ETL / DW = Extract, Transact, Load & DataWarehousing; ML = Machine Learning, VIZ = DataViz, DC = Distributed Computing, AML = Advanced Machine Learning)_
+A grade of 1.0 indicates no variance from the referenced solution outpout and performance, a grade of >0.9 is required throughout. _(ETL / DW = Extract, Transact, Load & DataWarehousing; ML = Machine Learning, VIZ = DataViz, DC = Distributed Computing, AML = Advanced Machine Learning)_
 
 | Week | Category   | Project | Avg Grade |
 | --- | -------------:| -----:|  -----:|
@@ -163,4 +163,4 @@ A grade of 1.0 indicates no variance from the referenced solution outpout and pe
 
 My Gradebook:
 
-![grade book](https://github.com/beilmanmich/datasci_projects/blob/master/GradeBook_TDI.png)
+![grade book](https://github.com/beilmanmich/datasci_projects/blob/master/images/GradeBook_TDI.png)
