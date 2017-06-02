@@ -9,7 +9,7 @@ In this project, I investigate these connections between the NYC elite. I determ
 
 Methodologically this was completed by using [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) to scrape all NYSD website pages for photo captions, total number of valid captions was 93,093. These captions were then parsed to return unique names, revealing a total of 113,031 names in the social network. Finally, I performed the graph analysis using networkx. The graph visualization can be viewed in the screenshot below.
 
-_TOOLS USED_: Python - **BeautifulSoup** (webscrape), **SQLlite**, regex (cleaning website data), networkx (graph/viz), d3.js (viz), bokeh, seaboard, matplotlib, CartoDB
+_TOOLS USED_: Python - **BeautifulSoup** (webscrape), **SQLite**, regex (cleaning website data), networkx (graph/viz), d3.js (viz), bokeh, seaboard, matplotlib, CartoDB
 
 ![network graph](https://github.com/beilmanmich/datasci_projects/blob/master/images/network_graph.png)
 
