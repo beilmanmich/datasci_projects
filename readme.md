@@ -150,7 +150,7 @@ _TOOLS USED_: Spark - **PySpark** and Scala, HDFS, Google Cloud Platform
 ----
 ## ...a note on performance
 
-A grade of 1.0 indicates no variance from the referenced solution outpout and performance, a grade of >0.9 is required throughout. _(ETL / DW = Extract, Transact, Load & DataWarehousing; ML = Machine Learning, VIZ = DataViz, DC = Distributed Computing, AML = Advanced Machine Learning)_
+A grade of 1.0 indicates no variance from the referenced solution outpout and performance, a grade >0.9 is required on each question of each problem set throughout. _(ETL / DW = Extract, Transact, Load & DataWarehousing; ML = Machine Learning, VIZ = DataViz, DC = Distributed Computing, AML = Advanced Machine Learning)_
 
 | Week | Category   | Project | Avg Grade |
 | --- | -------------:| -----:|  -----:|
